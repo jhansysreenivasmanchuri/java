@@ -10,6 +10,20 @@ public class Employee {
 	private String employeeName;// Employee Name
 	private String employeeCompany;// Employee Company
 	private int Salary;// Employee Salary
+	private boolean isTaxApplicable;
+	/**
+	 * @return the isTaxApplicable
+	 */
+	public boolean isTaxApplicable() {
+		return isTaxApplicable;
+	}
+
+	/**
+	 * @param isTaxApplicable the isTaxApplicable to set
+	 */
+	public void setTaxApplicable(boolean isTaxApplicable) {
+		this.isTaxApplicable = isTaxApplicable;
+	}
 	/**
 	 * @return the empId
 	 */
@@ -73,6 +87,15 @@ public class Employee {
 	/**
 	 * @param args
 	 */
+	public String toString() {
+        return "Employee{" +
+                "empId=" + empId +
+                ", employeeName='" + employeeName + '\'' +
+                ", employeeCompany='" + employeeCompany + '\'' +
+                ", Salary=" + Salary +
+                ", isTaxApplicable=" + isTaxApplicable +
+                '}';
+    }
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
