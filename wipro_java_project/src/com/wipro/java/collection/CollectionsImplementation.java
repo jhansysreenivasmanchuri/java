@@ -12,7 +12,7 @@ import java.util.Map;
 /**
  * 
  */
-public class Collections {
+public class CollectionsImplementation {
 
 	public static void main (String a[]) {
 		//Initializations
