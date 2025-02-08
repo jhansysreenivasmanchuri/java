@@ -26,9 +26,9 @@ public class EmployeeManagementTest {
     public void testingAddEmployee() { 
         Employee emp = new Employee(3, "Kiran", "Finance", 55000, LocalDate.of(2023, 5, 10));
         service.addEmployee(emp);
-        Optional<Employee> found = service.searchEmployee(3);
-        assertTrue(found.isPresent());
-        assertEquals("Kiran", found.get().getName());
+        Optional<Employee> detected = service.searchEmployee(3);
+        assertTrue(detected.isPresent());
+        assertEquals("Kiran", detected.get().getName());
     }
 
     @Test
@@ -59,15 +59,15 @@ public class EmployeeManagementTest {
 
     @Test
     public void testingFilterByDepartment() { 
-        List<Employee> itEmployees = service.filterByDepartment("IT");
-        assertEquals(1, itEmployees.size());
-        assertEquals("Mani", itEmployees.get(0).getName());
+        List<Employee> hrMembers = service.filterByDepartment("HR");
+        assertEquals(1, hrMembers.size());
+        assertEquals("Sree", hrMembers.get(0).getName());
     }
 
     @Test
     public void testingSortByName() { 
         List<Employee> sorted = service.sortByName();
-        assertEquals("Sree", sorted.get(0).getName());
-        assertEquals("Mani", sorted.get(1).getName());
+        assertEquals("Sree", sorted.get(1).getName());
+        assertEquals("Mani", sorted.get(0).getName());
     }
 }
